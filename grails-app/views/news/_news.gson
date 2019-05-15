@@ -1,0 +1,10 @@
+import secured.async.News
+
+model {
+    News news;
+}
+
+json {
+    header "The News";
+    items tmpl.'/newsItem/newsItem'('newsItem', news.items);
+}

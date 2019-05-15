@@ -1,0 +1,13 @@
+import secured.async.NewsItem
+
+model {
+    NewsItem newsItem;
+}
+
+json {
+    title newsItem.title;
+    body newsItem.body;
+    if (newsItem.authors) {
+        authors newsItem.authors;
+    }
+}
